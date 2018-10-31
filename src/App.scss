@@ -18,6 +18,10 @@
     padding: 4.125rem 0 0;
   }
 
+  &__mobile-button-group {
+    display: none;
+  }
+
   &__spacing {
     flex: 1 0 auto;
     max-height: 3rem;
@@ -194,6 +198,124 @@
       //line-height: 1rem;
     }
   }
+
+  @media only screen and (max-width: 750px) {
+    &__header {
+      padding: 0;
+    }
+    
+    &__spacing {
+      display: none;
+    }
+
+    &__logo {
+      margin: 1.5rem;
+    }
+
+    &__top {
+      margin: 0;
+      display: flex;
+      flex-flow: column nowrap;
+
+      button {
+        display: none;
+      }
+
+      .app__main-text-wrapper {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+      }
+
+      .app__main-text {
+        font-size: 1.5rem;
+        line-height: 2.125rem;
+        height: unset;
+      }
+    }
+    
+    &__mobile-button-group {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 1rem auto 1rem;
+      
+      button {
+        display: block;
+        padding: .25rem 1.5rem;
+        height: unset;
+        min-width: unset;
+        font-size: .75rem;
+
+        &:nth-of-type(1) {
+          margin-right: .5rem;
+        }
+
+        &:nth-of-type(2) {
+          margin-left: .5rem;
+        }
+      }
+    }
+
+    &__arrows {
+      position: relative;
+    }
+
+    &__line {
+      width: 100%;
+      background-image: linear-gradient(to right, $lavendar-pink 0%, $white 50%);
+    }
+
+    &__curves {
+      position: absolute;
+      top: 2px;
+      right: 2rem;
+    }
+
+    &__curve-up {
+      display: none;
+    }
+
+    &__curve-down {
+      right: 0;
+      left: unset;
+      height: 20rem;
+      bottom: -20rem;
+
+      &__arrow {
+        bottom: -95%;
+      }
+    }
+
+    &__bottom {
+      margin: 2.875rem 4rem 0 .625rem;
+
+      button {
+        display: none;
+      }
+
+      .app__point {
+        font-size: .75rem;
+        line-height: 1rem;
+        //padding: 0 1.5rem;
+      }
+    }
+
+    &__footer {
+      margin: 1rem;
+    }
+
+    &__actions {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    &__special-text {
+      display: none;
+    }
+  }
 }
 
 .btn {
@@ -229,5 +351,6 @@
 .text {
   &--bold {
     font-weight: 600;
+    color: $white;
   }
 }

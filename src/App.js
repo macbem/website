@@ -21,7 +21,21 @@ class App extends Component {
                 Uniswap is a protocol for automated token exchange on Ethereum.
               </div>
             </div>
-            <button className="btn__primary">Read the docs</button>
+            <div className="app__mobile-button-group">
+              <button
+                className="btn__primary"
+                onClick={() => window.open('https://docs.uniswap.io/', '_blank')}
+              >
+                Read the docs
+              </button>
+              <button
+                className="btn__primary"
+                onClick={() => window.open('https://uniswap.exchange/', '_self')}
+              >
+                Swap Tokens
+              </button>
+            </div>
+            <button className="btn__primary" onClick={() => window.open('https://docs.uniswap.io/', '_blank')}>Read the docs</button>
           </div>
           <div className="app__arrows">
             <div className="app__line" />
@@ -49,20 +63,23 @@ class App extends Component {
                 -> A commitment to free and decentralized asset exchange
               </div>
             </div>
-            <button className="btn__primary" onClick={() => window.open('https://uniswap.exchange/', '_blank')}>
+            <button className="btn__primary" onClick={() => window.open('https://uniswap.exchange/', '_self')}>
               Swap Tokens
             </button>
           </div>
         </div>
         <div className="app__footer">
-          <div className="app__special-text">
+          <div
+            className="app__special-text"
+            onClick={() => window.open('https://blog.ethereum.org/2018/08/17/ethereum-foundation-grants-update-wave-3/', '_blank')}
+          >
             Ethereum Foundation grant recipient ↗
           </div>
           <div className="app__actions">
             <a href="https://github.com/Uniswap/uniswap-frontend" target="_blank">GitHub</a>
             <a href="https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig">Whitepaper</a>
             <a href="https://twitter.com/UniswapExchange">Twitter</a>
-            <a href="https://www.reddit.com/r/UniSwap/">Reddit</a>
+            {/*<a href="https://www.reddit.com/r/UniSwap/">Reddit</a>*/}
             {/*<a href="#">Email</a>*/}
           </div>
         </div>
