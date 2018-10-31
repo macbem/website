@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 import './App.scss';
+
+const b = text => <span className="text--bold">{text}</span>;
 
 class App extends Component {
   render() {
@@ -8,8 +10,11 @@ class App extends Component {
       <div className="app">
         <div className="app__content">
           <div className="app__header">
-            <div className="app__logo"></div>
+            <div className="app__logo">
+              <img src={logo} />
+            </div>
           </div>
+          <div className="app__spacing" />
           <div className="app__top">
             <div className="app__main-text-wrapper">
               <div className="app__main-text">
@@ -31,22 +36,34 @@ class App extends Component {
           </div>
           <div className="app__bottom">
             <div className="app__main-text-wrapper">
-              <div className="app__point">• Become a liquidity provider for any ERC20 token</div>
-              <div className="app__point">• Pool liquidity to create to create</div>
-              <div className="app__point">• Pool liquidity</div>
-              <div className="app__point">• Trade any ERC20 for any ERC20 in a single transaction</div>
+              <div className="app__point">
+                -> A {b`simple smart contract`} interface for swapping ERC20 tokens
+              </div>
+              <div className="app__point">
+                -> A {b`formalized model`} for pooling liquidity reserves
+              </div>
+              <div className="app__point">
+                -> An {b`open source frontend`} interface for traders and liquidity providers
+              </div>
+              <div className="app__point">
+                -> A commitment to free and decentralized asset exchange
+              </div>
             </div>
-            <button className="btn__primary">Swap Tokens</button>
+            <button className="btn__primary" onClick={() => window.open('https://uniswap.exchange/', '_blank')}>
+              Swap Tokens
+            </button>
           </div>
         </div>
         <div className="app__footer">
-          <div className="app__special-text">Ethereum Foundation grant recipient</div>
+          <div className="app__special-text">
+            Ethereum Foundation grant recipient ↗
+          </div>
           <div className="app__actions">
-            <a href="https://github.com/Uniswap/uniswap-frontend" target="_blank">Github</a>
+            <a href="https://github.com/Uniswap/uniswap-frontend" target="_blank">GitHub</a>
             <a href="https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig">Whitepaper</a>
             <a href="https://twitter.com/UniswapExchange">Twitter</a>
             <a href="https://www.reddit.com/r/UniSwap/">Reddit</a>
-            <a href="#">Email</a>
+            {/*<a href="#">Email</a>*/}
           </div>
         </div>
       </div>
