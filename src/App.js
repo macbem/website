@@ -21,51 +21,31 @@ class App extends Component {
                 Uniswap is a protocol for automated token exchange on Ethereum.
               </div>
             </div>
-            <div className="app__mobile-button-group">
-              <button
-                className="btn__primary"
-                onClick={() => window.open('https://docs.uniswap.io/', '_blank')}
-              >
-                Read the docs
-              </button>
-              <button
-                className="btn__primary"
-                onClick={() => window.open('https://uniswap.exchange/', '_self')}
-              >
-                Swap Tokens
-              </button>
-            </div>
-            <button className="btn__primary" onClick={() => window.open('https://docs.uniswap.io/', '_blank')}>Read the docs</button>
           </div>
-          <div className="app__arrows">
-            <div className="app__line" />
-            <div className="app__curves">
-              <div className="app__curve-up">
-                <i className="app__curve-up__arrow" />
-              </div>
-              <div className="app__curve-down">
-                <i className="app__curve-down__arrow" />
-              </div>
-            </div>
-          </div>
+
           <div className="app__bottom">
             <div className="app__main-text-wrapper">
               <div className="app__point">
-                -> A <a href="https://github.com/Uniswap/contracts-vyper" target="_blank" rel="noopener">{b`simple smart contract`}</a> interface for swapping ERC20 tokens
+                <span className="arrow">-></span> A <a href="https://github.com/Uniswap/contracts-vyper" target="_blank" rel="noopener">{b`simple smart contract`}</a> interface for swapping ERC20 tokens
               </div>
               <div className="app__point">
-                -> A <a href="https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf" target="_blank" rel="noopener">{b`formalized model`}</a> for pooling liquidity reserves
+                <span className="arrow">-></span> A <a href="https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf" target="_blank" rel="noopener">{b`formalized model`}</a> for pooling liquidity reserves
               </div>
               <div className="app__point">
-                -> An <a href="https://github.com/Uniswap/uniswap-frontend" target="_blank" rel="noopener">{b`open source frontend`}</a> interface for traders and liquidity providers
+                <span className="arrow">-></span> An <a href="https://github.com/Uniswap/uniswap-frontend" target="_blank" rel="noopener">{b`open source frontend`}</a> interface for traders and liquidity providers
               </div>
               <div className="app__point">
-                -> A commitment to free and decentralized asset exchange
+                <span className="arrow">-></span> A commitment to free and decentralized asset exchange
               </div>
             </div>
+
+          </div>
+
+          <div className="app__bottom">
             <button className="btn__primary" onClick={() => window.open('https://uniswap.exchange/', '_self')}>
               Swap Tokens
             </button>
+            <button className="btn__primary" onClick={() => window.open('https://docs.uniswap.io/', '_blank')}>Read the docs</button>
           </div>
         </div>
         <div className="app__footer">
