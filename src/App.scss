@@ -135,6 +135,16 @@
     font-size: 1rem;
     line-height: 1.5rem;
     color: $concrete-gray;
+
+    a {
+     color: $white;
+     text-decoration: none;
+
+     &:hover {
+       text-decoration: underline;
+     }
+
+    }
   }
 
   &__point + &__point {
@@ -203,7 +213,7 @@
     &__header {
       padding: 0;
     }
-    
+
     &__spacing {
       display: none;
     }
@@ -234,12 +244,12 @@
         height: unset;
       }
     }
-    
+
     &__mobile-button-group {
       display: flex;
       flex-flow: row nowrap;
       margin: 1rem auto 1rem;
-      
+
       button {
         display: block;
         padding: .25rem 1.5rem;
@@ -311,7 +321,7 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     &__special-text {
       display: none;
     }
