@@ -1,12 +1,16 @@
 @import './variables.scss';
 
 .app {
-  background-image: linear-gradient(to right, $lavendar-pink, $lavendar-purple);
+  // background-image: linear-gradient(to right, $lavendar-pink, $lavendar-purple);
+  // background-image: url('assets/bg.png');
+  background-size: cover;
+  background-image: url('assets/bg.svg'), linear-gradient(to right, #DC6BE5, #A41DE4);
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
   width: 100%;
   color: $white;
+  overflow: scroll;
 
   &__content {
     display: flex;
@@ -24,6 +28,7 @@
 
   &__spacing {
     flex: 1 0 auto;
+    // margin-top: 4rem;
     max-height: 3rem;
   }
 
@@ -45,11 +50,11 @@
   }
 
   &__top {
-    margin-bottom: 3.25rem;
+    // margin-bottom: 3.25rem;
   }
 
   &__bottom {
-    margin-top: 4.5rem;
+    margin-top: 3.5rem;
   }
 
   &__arrows {
@@ -147,6 +152,10 @@
     }
   }
 
+  .arrow{
+    opacity: .4;
+  }
+
   &__point + &__point {
     margin-top: .75rem;
   }
@@ -161,8 +170,12 @@
     color: $concrete-gray;
     font-size: 1rem;
     line-height: 1.5rem;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
     cursor: pointer;
+  }
+
+  &__special-text:hover{
+    text-decoration: underline;
   }
 
   &__actions {
@@ -225,6 +238,7 @@
 
     &__top {
       margin: 0;
+      margin-top: 2rem;
       display: flex;
       flex-flow: column nowrap;
 
@@ -240,8 +254,8 @@
       }
 
       .app__main-text {
-        font-size: 1.5rem;
-        line-height: 2.125rem;
+        font-size: 1.75rem;
+        line-height: 2.75rem;
         height: unset;
       }
     }
@@ -299,15 +313,26 @@
     }
 
     &__bottom {
-      margin: 2.875rem 4rem 0 .625rem;
+      // margin: 4.875rem 4rem 0 .625rem;
+      margin: 1.5rem;
+      margin-top: 3rem;
 
       button {
-        display: none;
+        // display: none;
+      }
+
+      .btn__primary{
+        padding: 0;
+        padding: .25rem 1rem;
+        height: 2.5rem;
+        font-size: .75rem;
+        min-width: 9rem;
+        margin-right: 1.5rem;
       }
 
       .app__point {
-        font-size: .75rem;
-        line-height: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         //padding: 0 1.5rem;
       }
     }
@@ -316,15 +341,22 @@
       margin: 1rem;
     }
 
-    &__actions {
+    &__actions a{
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: center;
+      font-size: .75rem;
+      margin-left: 1rem;
+    }
+    &__actions a+a{
+      margin-left: 1rem;
     }
 
-    &__special-text {
-      display: none;
+    &__special-text{
+      font-size: .75rem;
+      margin-left: 1rem;
+      // display: none;
     }
   }
 }
@@ -334,10 +366,11 @@
     min-width: 14.375rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    padding: 1rem;
-    height: 3.5rem;
+    // padding: 1rem;
+    height: 3rem;
     border-radius: 3.5rem;
-    background-color: rgba($alabaster-gray, .3);
+    margin-right: 2rem;
+    background-color: rgba(196,74,229, 1);
     border: 1px solid $white;
     color: $white;
     font-weight: 700;
@@ -348,7 +381,7 @@
     transition: 200ms ease-in-out;
 
     &:hover {
-      background-color: rgba($alabaster-gray, .35);
+      background-color: rgba(196,74,229, .2);
       //background-color: rgba($alabaster-gray, .25);
     }
 
