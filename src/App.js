@@ -79,8 +79,8 @@ class App extends Component {
             <a href="https://github.com/Uniswap" target="_blank" rel="noopener">GitHub</a>
             <a href="https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig" target="_blank" rel="noopener">Whitepaper</a>
             <a href="https://twitter.com/UniswapExchange" target="_blank" rel="noopener">Twitter</a>
-            {/*<a href="https://www.reddit.com/r/UniSwap/">Reddit</a>*/}
-            {/*<a href="#">Email</a>*/}
+            <a href="https://www.reddit.com/r/UniSwap/" target="_blank" rel="noopener">Reddit</a>
+            <a href="mailto:contact@uniswap.io">Email</a>
           </div>
         </div>
       </div>
