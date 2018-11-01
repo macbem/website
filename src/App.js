@@ -51,13 +51,13 @@ class App extends Component {
           <div className="app__bottom">
             <div className="app__main-text-wrapper">
               <div className="app__point">
-                -> A {b`simple smart contract`} interface for swapping ERC20 tokens
+                -> A <a href="https://github.com/Uniswap/contracts-vyper" target="_blank" rel="noopener">{b`simple smart contract`}</a> interface for swapping ERC20 tokens
               </div>
               <div className="app__point">
-                -> A {b`formalized model`} for pooling liquidity reserves
+                -> A <a href="https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf" target="_blank" rel="noopener">{b`formalized model`}</a> for pooling liquidity reserves
               </div>
               <div className="app__point">
-                -> An {b`open source frontend`} interface for traders and liquidity providers
+                -> An <a href="https://github.com/Uniswap/uniswap-frontend" target="_blank" rel="noopener">{b`open source frontend`}</a> interface for traders and liquidity providers
               </div>
               <div className="app__point">
                 -> A commitment to free and decentralized asset exchange
@@ -76,9 +76,9 @@ class App extends Component {
             Ethereum Foundation grant recipient ↗
           </div>
           <div className="app__actions">
-            <a href="https://github.com/Uniswap/uniswap-frontend" target="_blank">GitHub</a>
-            <a href="https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig">Whitepaper</a>
-            <a href="https://twitter.com/UniswapExchange">Twitter</a>
+            <a href="https://github.com/Uniswap" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig" target="_blank" rel="noopener">Whitepaper</a>
+            <a href="https://twitter.com/UniswapExchange" target="_blank" rel="noopener">Twitter</a>
             {/*<a href="https://www.reddit.com/r/UniSwap/">Reddit</a>*/}
             {/*<a href="#">Email</a>*/}
           </div>
