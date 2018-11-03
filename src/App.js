@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import logo from './assets/logo.svg';
+import ReactGA from 'react-ga';
 import './App.scss';
+
+const track = (category, action) => ReactGA.event({ category, action });
 
 const b = text => <span className="text--bold">{text}</span>;
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
+      <div className="app" onClick={e => {
+        const category = e.target.innerText;
+        if (category.length < 50) {
+          track(category, 'click');
+        }
+      }}>
         <div className="app__content">
           <div className="app__header">
             <div className="app__logo">
