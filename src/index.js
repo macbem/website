@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 import './index.scss';
 import App from './App';
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'development') {
   ReactGA.initialize('UA-128182339-2');
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
